@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة مطاعم الكبدة</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>نظام إدارة مطاعم الكبدة</h1>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="orders">الطلبات</button>
+                <button class="tab-btn" data-tab="menu">القائمة</button>
+                <button class="tab-btn" data-tab="reports">التقارير</button>
+            </div>
+        </header>
+
+        <div class="tab-content active" id="orders">
+            <div class="order-section">
+                <h2>القائمة</h2>
+                <div class="menu-items">
+                    <!-- سيتم ملؤها بالجافاسكريبت -->
+                </div>
+            </div>
+            <div class="order-section">
+                <h2>الفاتورة</h2>
+                <div class="invoice">
+                    <div class="invoice-items">
+                        <!-- سيتم ملؤها بالجافاسكريبت -->
+                    </div>
+                    <div class="invoice-total">
+                        <p>الإجمالي: <span id="total-amount">0.00</span> جنيه</p>
+                        <button id="print-btn">طباعة الفاتورة</button>
+                        <button id="new-order-btn">طلب جديد</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="menu">
+            <h2>إدارة القائمة</h2>
+            <div class="menu-management">
+                <div class="add-item">
+                    <h3>إضافة صنف جديد</h3>
+                    <input type="text" id="new-item-name" placeholder="اسم الصنف">
+                    <input type="number" id="new-item-price" placeholder="السعر">
+                    <button id="add-item-btn">إضافة</button>
+                </div>
+                <div class="menu-list">
+                    <!-- سيتم ملؤها بالجافاسكريبت -->
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="reports">
+            <h2>التقارير</h2>
+            <div class="report-filters">
+                <select id="report-type">
+                    <option value="daily">تقرير يومي</option>
+                    <option value="weekly">تقرير أسبوعي</option>
+                    <option value="monthly">تقرير شهري</option>
+                </select>
+                <input type="date" id="report-date">
+                <button id="generate-report-btn">إنشاء التقرير</button>
+            </div>
+            <div class="report-results">
+                <!-- سيتم ملؤها بالجافاسكريبت -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
